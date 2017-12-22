@@ -1,0 +1,10 @@
+spring:
+   rabbitmq:
+    addresses: 47.95.8.210
+    port: 5672
+    username: hcl
+    password: 950329hcl
+    publisher-confirms: true
+    virtual-host: /
+server:
+    port: 8888
