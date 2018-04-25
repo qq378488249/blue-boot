@@ -14,6 +14,8 @@
         <module>blue-api</module>
         <module>blue-utils</module>
         <module>blue-rabbitmq</module>
+        <module>blue-getui</module>
+        <module>blue-jiguang</module>
     </modules>
 
     <build>

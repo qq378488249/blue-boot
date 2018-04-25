@@ -1,0 +1,7 @@
+#endpoints:
+#  shutdown:
+#    enabled: true
+#    path: /admin
+#    sensitive: false
+#server:
+#  port: 9092
