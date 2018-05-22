@@ -16,6 +16,8 @@
         <module>blue-rabbitmq</module>
         <module>blue-getui</module>
         <module>blue-jiguang</module>
+        <module>blue-web</module>
+        <module>server-root</module>
     </modules>
 
     <build>

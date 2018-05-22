@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.blue</groupId>
+    <artifactId>client</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>client</name>
+    <description>client</description>
+
+    <parent>
+        <groupId>com.blue</groupId>
+        <artifactId>server-root</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+    </parent>
+
+    <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>com.blue</groupId>-->
+            <!--<artifactId>server</artifactId>-->
+            <!--<version>0.0.1-SNAPSHOT</version>-->
+            <!--&lt;!&ndash;<artifactId>server</artifactId>&ndash;&gt;-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>com.blue.dao</groupId>
+            <artifactId>blue-dao</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--<groupId></groupId>-->
+        <!--<artifactId>server</artifactId>-->
+        <!--<version>0.0.1-SNAPSHOT</version>-->
+        <!--<packaging>jar</packaging>-->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

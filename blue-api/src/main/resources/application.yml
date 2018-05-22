@@ -6,6 +6,12 @@ spring:
       username: root
       password: mysql123
       driver-class-name: com.mysql.jdbc.Driver
+  mail:
+    host: pop.exmail.qq.com
+    username: hechenglong@jinbeicat.com
+    password: Eva123
+#    properties:
+
 #  rabbitmq:
 #    host: 127.0.0.1
 #    port: 5672
@@ -18,7 +24,7 @@ mybatis:
   type-aliases-package: com.blue.dao.entity
 logging:
   level:
-    com.blue.dao.mapper: debug
+    com.blue.dao.mapper: TRACE
 #endpoints:
 #  shutdown:
 #    enabled: true

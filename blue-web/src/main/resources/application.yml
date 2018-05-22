@@ -1,0 +1,68 @@
+server:
+  port: 8085
+spring:
+  datasource:
+      url: jdbc:mysql://192.168.1.227:3306/lblue
+      username: root
+      password: mysql123
+      driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    cache: false
+#    mode: html5
+#    encoding: utf-8
+#    servlet:
+#      content-type: text/html
+#    content-type: text/html
+#  rabbitmq:
+#    host: 127.0.0.1
+#    port: 5672
+#    username: guest
+#    password: guest
+#    publisher-confirms: true
+#    virtual-host: /
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.blue.dao.entity
+logging:
+  level:
+    com.blue.dao.mapper: debug
+#endpoints:
+#  shutdown:
+#    enabled: true
+#    #启用安全密码
+#    sensitive: true
+#security:
+#  user:
+#    name: hcl
+#    password: 111111
+#management:
+#  security:
+#    roles: SUPERUSER
+#  context-path: /manage
+#  ##management endpoint的监听端口
+#  port: 8084
+  #只允许来自本地的链接
+#  address: 127.0.0.1
+#spring:
+##  cache:
+##    cache-names: sysConfigCach
+##    #缓存最大数量500条, 缓存失效时间 6个小时
+##    guava.spec: maximumSize=500,expireAfterWrite=360m
+##  mvc:
+##    view:
+##      prefix: /
+##      suffix: .vm
+#  datasource:
+#      url: jdbc:mysql://192.168.1.227:3306/ruqing_api
+#      username: root
+#      password: mysql123
+#      driver-class-name: com.mysql.jdbc.Driver
+##      tomcat:
+##        max-wait: 10000
+##        max-active: 200
+##        validation-query: SELECT 1 FROM DUAL
+##        test-on-borrow: true
+##        initial-size: 1
+#  mybatis:
+#    mapperLocations: classpath*:mapper/*.xml
+#    typeAliasesPackage: com.blue.dao.entity

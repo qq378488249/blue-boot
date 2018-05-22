@@ -1,0 +1,14 @@
+server:
+  port: 2001
+spring:
+  application:
+    name: eureka-consumer
+eureka:
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    serviceUrl:
+     defaultZone: http://localhost:3000/eureka/
+feign:
+  httpclient:
+    enabled: true

@@ -17,7 +17,7 @@ public class ApiControllerTest {
     public void test1() {
         User user = new User();
         user.setName("gg");
-        User user1 = userMapper.selectById(1);
+        User user1 = userMapper.selectByPrimaryKey(1L);
         System.out.println(user1.toString());
     }
 }

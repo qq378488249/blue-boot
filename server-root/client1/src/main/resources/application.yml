@@ -1,0 +1,20 @@
+server:
+  port: 1003
+spring:
+  application:
+    name: eureka-client
+  datasource:
+        url: jdbc:mysql://192.168.1.227:3306/lblue
+        username: root
+        password: mysql123
+        driver-class-name: com.mysql.jdbc.Driver
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1000/eureka/,http://localhost:3000/eureka/
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.blue.dao.entity
+logging:
+  level:
+    com.blue.dao.mapper: TRACE

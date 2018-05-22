@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>userList</title>
+    <link rel="stylesheet" th:href="@{/bootstrap-3.3.7/css/bootstrap.css}"></link>
+    <link rel="stylesheet" th:href="@{/font-awesome-4.7.0/css/font-awesome.css}"></link>
+    <link rel="stylesheet" th:href="@{/layui-2.2.6/css/layui.css}">
+</head>
+<body class="container">
+<br/>
+<h1>用户列表</h1>
+<br/><br/>
+<div class="with:80%">
+    <a><i class="fa fa-edit"></i> 编辑</a>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>User Name</th>
+            <!--<th>Password</th>-->
+            <!--<th>Age</th>-->
+            <!--<th>Edit</th>-->
+            <!--<th>Delete</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user:${users}">
+            <td th:if="${user.id}=='1'">
+                第一个人
+            </td>
+            <td th:if="${user.id}!='1'">
+                不是第一个人
+            </td>
+            <!--<a href="comments.html" th:href="@{/product/comments(prodId=${prod.id})}" th:if="${not #lists.isEmpty(prod.comments)}">view</a>-->
+            <!--<th scope="row" th:text="${user.id}">1</th>-->
+            <!--<div th:switch="${user.id}">-->
+                <!--<td th:case="'0'">第1个人</td>-->
+                <!--<td th:case="'1'">第二个人</td>-->
+            <!--</div>-->
+            <td th:text="${user.userName}">neo</td>
+            <!--<td th:text="${user.password}">Otto</td>-->
+            <!--<td th:text="${user.age}">6</td>-->
+            <!--<td><a th:href="@{/toEdit(id=${user.id})}">edit</a></td>-->
+            <!--<td><a th:href="@{/delete(id=${user.id})}">delete</a></td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="form-group">
+    <div class="col-sm-2 control-label">
+        <a href="/toAdd" th:href="@{/toAdd}" class="btn btn-info">add</a>
+    </div>
+</div>
+
+</body>
+</html>

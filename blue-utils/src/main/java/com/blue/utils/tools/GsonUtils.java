@@ -14,7 +14,6 @@ import java.util.Map;
  * @date 2016/4/25
  */
 public class GsonUtils {
-
     private static Gson gson = new Gson();
 
     public static String toJson(Object src) {
@@ -36,5 +35,9 @@ public class GsonUtils {
         System.out.println(GsonUtils.toJson(map));
         Map<String, Object> map1 = GsonUtils.fromJson(GsonUtils.toJson(map), Map.class);
         System.out.println(map1);
+    }
+
+    private void s(){
+        System.out.println(gson.toJson("235"));
     }
 }

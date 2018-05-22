@@ -1,6 +1,10 @@
 package com.blue.utils;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * 归并排序
@@ -9,11 +13,11 @@ import java.util.Arrays;
  * @date 2018/4/9
  */
 public class Test {
-    public static void main(String[] args) {
-        int[] b = {45, 42, 7};
-        px(b);
-        System.out.println(Arrays.toString(b));
-    }
+//    public static void main(String[] args) {
+//        int[] b = {45, 42, 7};
+//        px(b);
+//        System.out.println(Arrays.toString(b));
+//    }
 
     static void px(int[] a) {
         int[] temp = new int[a.length];
@@ -52,5 +56,66 @@ public class Test {
         while (left <= right) {
             arr[left++] = temp[t++];
         }
+    }
+
+    public static void main(String[] args) throws IOException {
+        in();
+//        System.out.println("请输入你的年龄：");
+//        int age = sc.nextInt();
+//        System.out.println("请输入你的工资：");
+//        float salary = sc.nextFloat();
+//        System.out.println("你的信息如下：");
+//        System.out.println("姓名："+name+"\n"+"年龄："+age+"\n"+"工资："+salary);
+    }
+
+    public static void in() {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("请输入一个数字字符串：");
+//        String str = sc.nextLine();
+//
+//        if (str == null || str.equals("")) {
+//            System.out.println("不能输入空，请重新输入");
+//            //继续接受键盘输入
+//        } else {
+//            if (isNum(str)) {
+//                System.out.println("您输入的数字是 " + str);
+//                return;
+//            } else {
+//                System.out.println("您输入的不是数字，请重新输入 ");
+//                //继续接受键盘输入
+//            }
+//        }
+//        in();
+        System.out.println(je(50000, 0.095, 6));
+        System.out.println(je1(50000, 0.1, 6));
+    }
+
+    static double je(double bj, double ll, double qx) {
+        double lx = bj * ll * qx / 12;
+        System.out.println("利息"+lx);
+        double sx = (bj + lx) * 0.015;
+        System.out.println("手续费" + sx);
+        return (bj + lx) * 0.985;
+    }
+
+    static double je1(double bj, double ll, double qx) {
+        double lx = bj * ll * qx / 12;
+        System.out.println("利息"+lx);
+        double sx = lx * 0.05;
+        System.out.println("手续费" + sx);
+        return bj + (lx * 0.95);
+    }
+
+    public static boolean isNum(String str) {
+        char[] chars = str.toCharArray();
+        for (char aChar : chars) {
+//            if (Character.isDigit(aChar)) {
+//                return true;
+//            }
+            if (!(aChar >= '0' && aChar <= '9')) {
+                return false;
+            }
+        }
+        return true;
     }
 }
